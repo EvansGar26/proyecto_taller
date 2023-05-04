@@ -143,6 +143,7 @@ Route::get('/graficas/conferencias2', [GraficasController::class, 'conferencias'
 Route::get('/graficas/conferencias', [GraficasController::class, 'conferenciasVista'])->name('graf-conferencias');
 
 //Ruta para perfil
+//perro._.
 
 Route::get('/perfil/datos', [PerfilController::class, 'datos'])->name('datos-user');
 Route::patch('/perfil', [PerfilController::class, 'actualiza'])->name('actualiza-user');
