@@ -128,6 +128,7 @@ Route::middleware('auth')->group(function () {
 });
 
 
+//jniuhb
 // //Ruta para pdfs
 
 // Route::get('/pdf', [PdfController::class, 'generarPdfUniCar'])->name('pdf.generarUniCar');
