@@ -174,9 +174,9 @@ Route::middleware('auth')->group(function () {
 
 
 // // Rutas de login y registro
-// Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-// Route::post('/login', [AuthController::class, 'authenticate'])->name('inicio-sesion');
-// Route::post('/', [AuthController::class, 'logout'])->name('cierra-sesion');
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'authenticate'])->name('inicio-sesion');
+Route::post('/', [AuthController::class, 'logout'])->name('cierra-sesion');
 
 Route::get('/', function () {
     return view('template.index');
