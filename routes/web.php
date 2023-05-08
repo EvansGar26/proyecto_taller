@@ -95,8 +95,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/algo', [Carreras_favoritasController::class, 'store'])->name('favorito');
     Route::post('/algo-delete', [Carreras_favoritasController::class, 'destroy'])->name('favorito-quitar');
 
-    Route::resource('registro', RegistroController::class);
-
     Route::resource('conferencias1', MuestraConferenciasController::class);
 
     Route::resource('paises', PaisesController::class);
@@ -177,6 +175,8 @@ Route::middleware('auth')->group(function () {
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticate'])->name('inicio-sesion');
 Route::post('/', [AuthController::class, 'logout'])->name('cierra-sesion');
+
+Route::resource('registro', RegistroController::class);
 
 Route::get('/', function () {
     return view('template.index');
